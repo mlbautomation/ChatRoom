@@ -13,7 +13,8 @@ func main() {
 	defer cancel()
 	setupAPI(ctx)
 
-	log.Fatal(http.ListenAndServeTLS(":8080", "server.crt", "server.key", nil))
+	//log.Fatal(http.ListenAndServeTLS(":8080", "server.crt", "server.key", nil))
+	log.Fatal(http.ListenAndServe(":8080", nil))
 }
 
 func setupAPI(ctx context.Context) {
